@@ -1,0 +1,15 @@
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.csproj.AssemblyReference.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.AssemblyInfoInputs.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.AssemblyInfo.cs
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.csproj.CoreCompileInputs.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\bin\Debug\net6.0\prueba2.exe
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\bin\Debug\net6.0\prueba2.deps.json
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\bin\Debug\net6.0\prueba2.runtimeconfig.json
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\bin\Debug\net6.0\prueba2.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\bin\Debug\net6.0\prueba2.pdb
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\refint\prueba2.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.pdb
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\prueba2.genruntimeconfig.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba2\obj\Debug\net6.0\ref\prueba2.dll

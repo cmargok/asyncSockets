@@ -1,0 +1,38 @@
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.AssemblyInfo.cs
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\server.exe
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\server.deps.json
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\server.runtimeconfig.json
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\server.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\server.pdb
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\web client.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\bin\Debug\net6.0\web client.pdb
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.csproj.CopyComplete
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\refint\server.dll
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.pdb
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\server.genruntimeconfig.cache
+C:\Users\dykey\Documents\cmargok\AsyncSocket\prueba 1\obj\Debug\net6.0\ref\server.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\server.exe
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\server.deps.json
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\server.runtimeconfig.json
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\server.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\server.pdb
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\web client.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\bin\Debug\net6.0\web client.pdb
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.csproj.CopyComplete
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\refint\server.dll
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.pdb
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+C:\Users\cmarg\Documents\cmargok\AsyncSocket\server\obj\Debug\net6.0\ref\server.dll

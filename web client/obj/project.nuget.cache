@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7PFyD4w9wAZbJ6FgOfriITrkwACKJ+oRiK5n27QfBYyRxYgoYmn4iz6t+pcJmxkY2n4V9gvC9rpbbvY5AZ038A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cmarg\\Documents\\cmargok\\AsyncSocket\\web client\\web client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cmarg\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
