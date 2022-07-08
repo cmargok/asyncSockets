@@ -32,13 +32,13 @@ namespace server
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
             // Create a TCP/IP socket.  
-            Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            Socket ServerSocket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
             // Bind the socket to the local endpoint and listen for incoming connections.  
             try
             {
-                listener.Bind(localEndPoint);
-                listener.Listen(100);
+                ServerSocket.Bind(localEndPoint);
+                ServerSocket.Listen(100);
 
                 while (true)
                 {
@@ -46,9 +46,11 @@ namespace server
                     allDone.Reset();
 
                     // Start an asynchronous socket to listen for connections.  
-                    Console.WriteLine("Waiting for a connection...");
+                    Console.WriteLine("Server is Waiting for a connection...");
 
-                    listener.BeginAccept(  new AsyncCallback(AcceptCallback), listener);
+                    ServerSocket.BeginAccept(new AsyncCallback(AcceptCallback), ServerSocket);
+
+                    
 
                     // Wait until a connection is made before continuing.  
                     allDone.WaitOne();

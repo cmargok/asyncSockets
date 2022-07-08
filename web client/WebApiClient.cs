@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
+using web_client.Models;
 
 namespace web_client
 
@@ -27,7 +28,7 @@ namespace web_client
 
         public async Task<PaisesResponseModel?> GetPaises()
         {
-            HttpResponseMessage response = await HttpClient.GetAsync("paises");
+            HttpResponseMessage response = await HttpClient.GetAsync("Pais");
 
             if (response.IsSuccessStatusCode)
             {
@@ -58,25 +59,6 @@ namespace web_client
 
 
 
-    public class PaisResponseModel
-
-    {
-
-
-        public int pais_ID { get; set; }
-        public string pais_nombre { get; set; }
-    
-
-    }
-
-
-    public partial class PaisesResponseModel
-    {
-
-        public IEnumerable<PaisResponseModel> paises { get; set; }
-
-    
-    }
 
 
 
@@ -84,18 +66,7 @@ namespace web_client
 
 
 
-
-    public class GenericRrespondeModel
-    {
-        public bool Succcess { get; set; }
-
-        public string ErrorNumber { get; set; }
-        public string ErrorDetail { get; set; }
-        public int NumberOfRecords { get; set; }
-
-
-
-    }
-    
    
+
+
 }
