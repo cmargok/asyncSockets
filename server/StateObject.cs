@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 
 namespace server
 {
+    /// <summary>
+    /// Clase que define el estandar para envio y recepcion de informacion por medio de los sockets
+    /// </summary>
     public class StateObject
     {
-        // Size of receive buffer.  
+        /// <value>Size of receive buffer.</value>  
         public const int BufferSize = 1024;
 
-        // Receive buffer.  
+        /// <value>Receive buffer.</value>  
         public byte[] buffer = new byte[BufferSize];
-
-        // Received data string.
+        /// <value>Received data string</value>  
         public String sb = "";
-
-        // Client socket.
+        /// <value>Client socket.</value>  
         public Socket? workSocket = null;
-
-
        
     }
 

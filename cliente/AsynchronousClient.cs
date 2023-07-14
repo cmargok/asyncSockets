@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace cliente
 {
+
+    /// <summary>
+    /// Clase cliente socket asincrono
+    /// </summary>
     public class AsynchronousClient
     {
 
@@ -28,8 +32,7 @@ namespace cliente
             try
             {
                 // Establish the remote endpoint for the socket.  
-                // The name of the
-                // remote device is "host.contoso.com".  
+                // The name of the local is defined by Dns.GetHostName "same ip as pc user"  
                 IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
@@ -39,50 +42,47 @@ namespace cliente
                     SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect to the remote endpoint.  
-                client.BeginConnect(remoteEP,
-                    new AsyncCallback(ConnectCallback), client);
+                client.BeginConnect(remoteEP,new AsyncCallback(ConnectCallback), client);
+
                 connectDone.WaitOne();
 
 
-                
+                //init a backthread that is always listening data from the server
                  Thread th = new Thread(() => Receive(client));
                    th.Start();
                 //  Receive(client);
 
                 // Send test data to the remote device. 
                 bool exit = false;
-                bool start = false;
-                string f = "";
+                string consoleMessage = "";
                 do{
-                    Console.WriteLine("digite lo que va a enviar");
-                    f = Console.ReadLine()!;
+                    Console.WriteLine("Escriba la peticion al servidor");
+
+                    consoleMessage = Console.ReadLine()!;
                     
-                    if (f == "cc")
+                    if (consoleMessage == "exit")
                     {
+                        //end the connection
                         Send(client, "This is a test<EOF>");
-                        //sendDone.WaitOne();
+                        //breaks the loop
                         exit = true;
                     }
                     else
                     {
-                        Send(client, f);
+                        
+                        Send(client, consoleMessage);
+
                         sendDone.WaitOne();
-                        f = "";
 
-                     /*   if (!exit && !start) {
+                        consoleMessage = "";
 
-                            Receive(client);
-                            receiveDone.WaitOne();
-                            start = true;
-                        }*/
+                 
                         
                     }
 
                 } while (!exit);
                 
-                // sendDone.WaitOne();
-                /* Send(client, "This is a test");
-                 sendDone.WaitOne();*/
+            
 
                 Console.WriteLine("llegare aqui?");
                 // Receive the response from the remote device.  
@@ -92,7 +92,9 @@ namespace cliente
                 // Write the response to the console.  
                 Console.WriteLine("Response received : {0}", response);
 
-                // Release the socket.  
+                // Release the socket.   <- not using now, socket in building
+
+
               //  client.Shutdown(SocketShutdown.Both);
                // client.Close();
 
@@ -115,8 +117,7 @@ namespace cliente
                 // Complete the connection.  
                 client.EndConnect(ar);
 
-                Console.WriteLine("Socket connected to {0}",
-                    client.RemoteEndPoint.ToString());
+                Console.WriteLine("Socket connected to {0}",client.RemoteEndPoint.ToString());
 
                 // Signal that the connection has been made.  
                 connectDone.Set();
@@ -127,13 +128,14 @@ namespace cliente
             }
         }
 
+
+
+        //this runs in the backgrround thread
         private static void Receive(Socket client)
-        {
-           
+        {           
            
                 try
                 {
-                    Console.WriteLine("recibo alguna vez?");
                 // Create the state object.  
                     StateObject state = new StateObject();
                     state.workSocket = client;
@@ -150,6 +152,8 @@ namespace cliente
                 receiveDone.WaitOne();
 
         }
+
+
         private static void ReceiveCallback(IAsyncResult ar)
         {
             try
@@ -170,6 +174,8 @@ namespace cliente
                     Console.WriteLine("-> " + response);
                     // Get the rest of the data.  
                     
+                    
+                    //creamos una nueva via abierta para seguir oyendo , por siempre
                       client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReceiveCallback), state);
                     receiveDone.Set();
                 }
@@ -181,17 +187,19 @@ namespace cliente
             }
         }
 
+
+        //enviamos la info al servidor
         private static void Send(Socket client, String data)
         {
-            Console.WriteLine("****************");
             // Convert the string data to byte data using ASCII encoding.  
             byte[] byteData = Encoding.ASCII.GetBytes(data);
 
             // Begin sending the data to the remote device.  
-            client.BeginSend(byteData, 0, byteData.Length, 0,
-                new AsyncCallback(SendCallback), client);
+            client.BeginSend(byteData, 0, byteData.Length, 0,new AsyncCallback(SendCallback), client);
         }
 
+
+        //
         private static void SendCallback(IAsyncResult ar)
         {
             try

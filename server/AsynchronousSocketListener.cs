@@ -7,26 +7,31 @@ using System.Text;
 using System.Threading.Tasks;
 using web_client;
 using Newtonsoft.Json;
+using web_client.Models;
 
 namespace server
 {
+
+    /// <summary>
+    /// Clase socket servidor asincrono
+    /// </summary>
     public class AsynchronousSocketListener
     {
 
         public static ManualResetEvent allDone = new ManualResetEvent(false);
-        private static WebApiClient capi = new WebApiClient();
+        private static WebApiClient API_RH = new WebApiClient();
 
         public AsynchronousSocketListener()
         {
+
+
         }
 
 
 
         public static void StartListening()
         {
-            // Establish the local endpoint for the socket.  
-            // The DNS name of the computer  
-            // running the listener is "host.contoso.com".  
+          
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
@@ -74,6 +79,7 @@ namespace server
 
             // Get the socket that handles the client request.  
             Socket listeners = (Socket)ar.AsyncState;
+
             Socket handler = listeners.EndAccept(ar);
 
             StateObject state = new StateObject();
@@ -95,6 +101,7 @@ namespace server
             // Retrieve the state object and the handler socket  
             // from the asynchronous state object.  
             StateObject state = (StateObject)ar.AsyncState;
+
             Socket handler = state.workSocket;
             
                 // Read data from the client socket.
@@ -130,8 +137,8 @@ namespace server
 
                     Send(handler, response);
 
-                handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
-                           new AsyncCallback(ReadCallback), state);
+                //creamos un loop indirecto para seguir recibiendo
+                 handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReadCallback), state);
                 /*   }
                    else
                    {
@@ -177,7 +184,7 @@ namespace server
 
         private static async Task<string> GetPaises()
         {
-            var paises = await capi.GetPaises();
+            PaisesResponseModel? paises = await API_RH.GetPaises();
 
 
             return JsonConvert.SerializeObject(paises, Formatting.Indented);
